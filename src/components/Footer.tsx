@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4">Our AI Tools</h3>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -37,6 +37,17 @@ const Footer = () => {
                 >
                   <ChevronRight size={16} className="mr-1" />
                   UBI Strategist GPT
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://worldpeacegpt.lovable.app/?via=aiwebtools"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white flex items-center"
+                >
+                  <ChevronRight size={16} className="mr-1" />
+                  World Peace GPT
                 </a>
               </li>
               <li>
@@ -135,7 +146,16 @@ const Footer = () => {
             © 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white">AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           
-          <div className="mt-4 sm:mt-0">
+          <div className="mt-4 sm:mt-0 flex gap-4">
+            <a 
+              href="https://worldpeacegpt.lovable.app/?via=aiwebtools"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-panel rounded-full px-5 py-2 flex items-center gap-2 text-sm hover:bg-white/10 transition-colors"
+            >
+              World Peace GPT
+              <ExternalLink size={14} />
+            </a>
             <a 
               href="https://www.aiwebtools.ai"
               target="_blank"

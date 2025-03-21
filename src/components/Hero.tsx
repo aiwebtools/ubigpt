@@ -118,6 +118,14 @@ const Hero = () => {
               >
                 Try UBI Strategist GPT
               </a>
+              <a
+                href="https://worldpeacegpt.lovable.app/?via=aiwebtools"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="secondary-button bg-ubi-secondary hover:bg-ubi-secondary/80"
+              >
+                Try World Peace GPT
+              </a>
               <a href="#how-it-works" className="secondary-button">
                 Learn More
               </a>

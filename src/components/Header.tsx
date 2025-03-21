@@ -18,6 +18,7 @@ const Header = () => {
 
   const links = [
     { name: 'UBI Strategist GPT', href: 'https://chatgpt.com/g/g-67dd7a72d0fc81919821bdeec393b21d-ubi-strategist-gpt' },
+    { name: 'World Peace GPT', href: 'https://worldpeacegpt.lovable.app/?via=aiwebtools' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Disclaimer', href: '#disclaimer' },
     { name: 'More AI Tools', href: 'https://www.aiwebtools.ai' }

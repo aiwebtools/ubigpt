@@ -9,6 +9,7 @@ import FAQ from '../components/FAQ';
 import Disclaimer from '../components/Disclaimer';
 import Footer from '../components/Footer';
 import DisclaimerModal from '../components/DisclaimerModal';
+import YouMayAlsoLike from '../components/YouMayAlsoLike';
 
 const Index = () => {
   useEffect(() => {
@@ -71,6 +72,7 @@ const Index = () => {
       <Features />
       <HowItWorks />
       <Testimonials />
+      <YouMayAlsoLike />
       <FAQ />
       <Disclaimer />
       <Footer />
