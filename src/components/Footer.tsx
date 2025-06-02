@@ -16,6 +16,14 @@ const Footer = () => {
   return (
     <footer className="relative pt-16 pb-8 bg-ubi-darker border-t border-white/10">
       <div className="container mx-auto px-4">
+        {/* Small disclaimer notice */}
+        <div className="text-center mb-8">
+          <p className="text-xs text-gray-500 max-w-2xl mx-auto">
+            This tool is provided for informational, educational, and research purposes only. 
+            All analyses and recommendations should be verified independently.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 lg:col-span-1">
             <Logo size={36} />
@@ -98,7 +106,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services"
+                  href="https://aiwebtools.lovable.app/disclaimers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white flex items-center"
