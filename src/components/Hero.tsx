@@ -100,14 +100,16 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-gradient">Universal Basic Income</span><br />
+              <span className="text-gradient">AI WEB TOOLS</span><br />
+              <span className="text-white">Universal Basic Income</span><br />
               <span className="text-white">For The AI Era</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-              Design optimal UBI models and transition strategies tailored to different regions, 
-              economic trends, and societal needs with AI-powered intelligence.
-            </p>
+            <h2 className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+              Design optimal UBI models and transition strategies with AI WEB TOOLS. 
+              Our advanced AI tools analyze economic trends, regional data, and societal needs 
+              to create comprehensive Universal Basic Income frameworks powered by cutting-edge artificial intelligence.
+            </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
@@ -115,6 +117,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="primary-button"
+                title="Try UBI Strategist GPT - AI WEB TOOLS"
               >
                 Try UBI Strategist GPT
               </a>
@@ -123,12 +126,18 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="secondary-button bg-ubi-secondary hover:bg-ubi-secondary/80"
+                title="Try World Peace GPT - AI WEB TOOLS"
               >
                 Try World Peace GPT
               </a>
-              <a href="#how-it-works" className="secondary-button">
+              <a href="#how-it-works" className="secondary-button" title="Learn More About AI WEB TOOLS">
                 Learn More
               </a>
+            </div>
+            
+            {/* SEO-friendly content */}
+            <div className="mt-8 text-sm text-gray-400">
+              <p>AI WEB TOOLS - Leading provider of AI tools for economic analysis and policy planning</p>
             </div>
           </div>
           
@@ -140,16 +149,16 @@ const Hero = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="glass-panel rounded-lg p-4 bg-ubi-accent/10">
-                    <h3 className="text-sm font-medium text-ubi-accent mb-1">Region Analysis</h3>
-                    <p className="text-xs text-gray-300">Economic trends, workforce, and societal needs assessment</p>
+                    <h3 className="text-sm font-medium text-ubi-accent mb-1">AI-Powered Region Analysis</h3>
+                    <p className="text-xs text-gray-300">Economic trends, workforce, and societal needs assessment using advanced AI tools</p>
                   </div>
                   <div className="glass-panel rounded-lg p-4 bg-ubi-secondary/10">
-                    <h3 className="text-sm font-medium text-ubi-secondary mb-1">UBI Framework</h3>
-                    <p className="text-xs text-gray-300">Flat, means-tested, or conditional models with impact projections</p>
+                    <h3 className="text-sm font-medium text-ubi-secondary mb-1">Smart UBI Framework</h3>
+                    <p className="text-xs text-gray-300">AI-generated flat, means-tested, or conditional models with impact projections</p>
                   </div>
                   <div className="glass-panel rounded-lg p-4 bg-ubi-tertiary/10">
-                    <h3 className="text-sm font-medium text-ubi-tertiary mb-1">Implementation Strategy</h3>
-                    <p className="text-xs text-gray-300">Multi-phase roadmaps with funding sources and policy integration</p>
+                    <h3 className="text-sm font-medium text-ubi-tertiary mb-1">AI Implementation Strategy</h3>
+                    <p className="text-xs text-gray-300">Multi-phase roadmaps with AI-optimized funding sources and policy integration</p>
                   </div>
                 </div>
               </div>
