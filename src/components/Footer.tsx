@@ -165,7 +165,7 @@ const Footer = () => {
               <ExternalLink size={14} />
             </a>
             <a 
-              href="https://www.aiwebtools.ai"
+              href="https://aiwebtools.lovable.app/?via=aiwebtools"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-panel rounded-full px-5 py-2 flex items-center gap-2 text-sm hover:bg-white/10 transition-colors"

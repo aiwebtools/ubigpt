@@ -21,7 +21,7 @@ const Header = () => {
     { name: 'World Peace GPT', href: 'https://worldpeacegpt.lovable.app/?via=aiwebtools' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Disclaimer', href: '#disclaimer' },
-    { name: 'More AI Tools', href: 'https://www.aiwebtools.ai' }
+    { name: 'More AI Tools', href: 'https://aiwebtools.lovable.app/?via=aiwebtools' }
   ];
 
   return (

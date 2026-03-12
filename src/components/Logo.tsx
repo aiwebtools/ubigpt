@@ -33,7 +33,7 @@ const Logo: React.FC<LogoProps> = ({ size = 40, showText = true, className = '' 
       {showText && (
         <div className="flex flex-col">
           <span className="font-bold text-lg sm:text-xl tracking-tight">UBI Strategist GPT</span>
-          <span className="text-xs text-gray-400">Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-ubi-accent hover:text-ubi-secondary transition-colors">AiWebTools.Ai</a></span>
+          <span className="text-xs text-gray-400">Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-ubi-accent hover:text-ubi-secondary transition-colors">AiWebTools.Ai</a></span>
         </div>
       )}
     </div>
