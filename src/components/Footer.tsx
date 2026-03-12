@@ -151,7 +151,7 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white">AI WEB TOOLS LLC</a> All rights reserved.
+            © 2025 <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-white">AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           
           <div className="mt-4 sm:mt-0 flex gap-4">
