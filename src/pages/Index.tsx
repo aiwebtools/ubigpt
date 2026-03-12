@@ -21,7 +21,7 @@ const Index = () => {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "AI WEB TOOLS",
-      "url": "https://aiwebtools.ai",
+      "url": "https://aiwebtools.lovable.app/?via=aiwebtools",
       "description": "Leading AI tools platform featuring UBI Strategist GPT for Universal Basic Income planning and World Peace GPT for global solutions",
       "publisher": {
         "@type": "Organization",
