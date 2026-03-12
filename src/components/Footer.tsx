@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai"
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white flex items-center"
