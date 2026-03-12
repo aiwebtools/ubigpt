@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Logo from './Logo';
 import { Menu, X } from 'lucide-react';
 
@@ -12,8 +12,26 @@ const Header = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileMenuOpen]);
+
+  const toggleMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
   }, []);
 
   const links = [
@@ -27,22 +45,22 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-panel py-3' : 'bg-transparent py-5'
+        isScrolled ? 'glass-panel py-2 sm:py-3' : 'bg-transparent py-3 sm:py-5'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="/" className="z-50">
+          <a href="/" className="z-50 shrink-0">
             <Logo />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white/80 hover:text-white link-highlight text-sm font-medium transition-colors"
+                className="text-white/80 hover:text-white link-highlight text-sm font-medium transition-colors whitespace-nowrap"
                 target={link.href.startsWith('http') ? '_blank' : undefined}
                 rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
@@ -53,7 +71,7 @@ const Header = () => {
               href="https://chatgpt.com/g/g-67dd7a72d0fc81919821bdeec393b21d-ubi-strategist-gpt"
               target="_blank"
               rel="noopener noreferrer"
-              className="primary-button"
+              className="primary-button text-sm px-4 py-2"
             >
               Try Now
             </a>
@@ -61,43 +79,48 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden z-50 text-white p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden z-50 text-white p-2 -mr-2 touch-manipulation"
+            onClick={toggleMenu}
             aria-label="Toggle Menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-ubi-darker/95 z-40 flex flex-col items-center justify-center animate-scale-in">
-          <nav className="flex flex-col items-center gap-6">
-            {links.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-white/80 hover:text-white text-lg font-medium transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-                target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              >
-                {link.name}
-              </a>
-            ))}
+      {/* Mobile Menu - using CSS transform for instant feel */}
+      <div 
+        className={`fixed inset-0 bg-ubi-darker/98 z-40 flex flex-col items-center justify-center transition-all duration-200 lg:hidden ${
+          isMobileMenuOpen 
+            ? 'opacity-100 pointer-events-auto' 
+            : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <nav className="flex flex-col items-center gap-5 w-full px-8 max-w-sm">
+          {links.map((link) => (
             <a
-              href="https://chatgpt.com/g/g-67dd7a72d0fc81919821bdeec393b21d-ubi-strategist-gpt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button mt-4"
-              onClick={() => setIsMobileMenuOpen(false)}
+              key={link.name}
+              href={link.href}
+              className="text-white/80 hover:text-white text-lg font-medium transition-colors w-full text-center py-2 touch-manipulation"
+              onClick={closeMenu}
+              target={link.href.startsWith('http') ? '_blank' : undefined}
+              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
-              Try Now
+              {link.name}
             </a>
-          </nav>
-        </div>
-      )}
+          ))}
+          <a
+            href="https://chatgpt.com/g/g-67dd7a72d0fc81919821bdeec393b21d-ubi-strategist-gpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-button mt-4 w-full text-center"
+            onClick={closeMenu}
+          >
+            Try Now
+          </a>
+        </nav>
+      </div>
     </header>
   );
 };
